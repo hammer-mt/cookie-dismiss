@@ -1,0 +1,19 @@
+<script>
+var lsVar = 'dismissed';
+var closeId = 'dismiss';
+var elemId = 'cookie';
+var elem = document.getElementById(elemId);
+
+if(localStorage.getItem(lsVar) !== null) {
+	var elem = document.getElementById(elemId);
+	elem.remove();
+    console.log(elemId +' hidden');
+} else {
+	var closeElem = document.getElementById(closeId);
+	closeElem.addEventListener("click", function() {
+		localStorage.setItem(lsVar, 1);
+      	console.log(elemId +' dismissed');
+	});
+  	elem.remove();
+}
+</script>
