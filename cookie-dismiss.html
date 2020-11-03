@@ -4,7 +4,6 @@
 var lsVar = 'dismissed';
 var closeId = 'dismiss';
 var elemId = 'cookie';
-var elem = document.getElementById(elemId);
 
 if(localStorage.getItem(lsVar) !== null) {
 	var elem = document.getElementById(elemId);
@@ -16,6 +15,5 @@ if(localStorage.getItem(lsVar) !== null) {
 		localStorage.setItem(lsVar, 1);
       		console.log(elemId +' dismissed');
 	});
-  	elem.remove();
 }
 </script>
